@@ -1,0 +1,95 @@
+body {
+    background-image: url(resimler/mor.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.panel-kutu {
+    width: 25%;
+    height: 60%;
+    color: rgb(134, 204, 204);
+    font-family: 'Times New Roman', Times, serif;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    padding: 1%;
+}
+
+.panel-kutu h2 {
+    text-align: center;
+    color: rgba(15, 15, 15, 0.856);
+    margin-top: 15%;
+
+}
+
+.panel-kutu p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgba(91, 10, 70, 0.351);
+}
+
+.panel-kutu input {
+    width: 97%;
+    height: 25%;
+    padding: 4%;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color: blueviolet;
+}
+
+.panel-kutu input[type="text"]
+.panel-kutu input[type="passeword"] {
+    border: none;
+    border-bottom: transparent;
+    background: transparent;
+    /* outline: none; */
+    color: #dca82f;
+    font-size: 10px;
+
+}
+
+::placeholder {
+    color: rgb(97, 93, 93);
+}
+
+.panel-kutu input[type="submit"] {
+    border: none;
+    outline: none;
+    height: 40%;
+    font-size: 16px;
+    background-color: #559ce3;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.panel-kutu input[type="submit"] :hover {
+    color: crimson;
+    background: #fcfffc;
+
+}
+
+.panel-kutu a {
+    text-decoration: none;
+    color: rgb(184, 55, 26);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+
+.panel-kutu a:hover {
+    color: rgb(182, 99, 241);
+    transition: 500ms;
+
+}
+.panel-icon{
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    left: 35%;
+    top: -20%;
+    background-image:url(resimler/icon-woman.png) ;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
