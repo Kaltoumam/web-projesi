@@ -1,0 +1,243 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.bgrd {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.txt {
+    color: #fff;
+    width: 60%;
+    height: 30%;
+    text-align: center;
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-left: 250px;
+    margin-top: 250px;
+}
+
+.tanimi {
+   background-color: #e7e7e7;
+    margin-top: 300px;
+    text-align: center;
+    position: absolute;
+    font-size: 30px;
+    padding-top: 3px;
+    overflow: hidden;
+}
+
+img {
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    left: 120px;
+}
+.cad-hknda {
+    text-align: center;
+    width: 50%;
+    height: 30%;
+    margin-left: 28%;
+    font-size: 23px;
+}
+
+.accordion {
+    margin: 60px auto;
+    width: 60%;
+    padding: 20px;
+    position: relative;
+
+}
+
+.cntent {
+    font-size: 20px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.accordion li {
+    list-style: none;
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #c4aeae;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* label::after */
+.accordion .cntent {
+
+    color: #555;
+    padding-inline-start: 0 10px;
+    line-height: 25px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+
+}
+
+.accordion input[type="radio"]:checked+label+.cntent {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+.accordion input[type="radio"]:checked+label::before {
+    content: '-';
+}
+
+.btn{
+    color: black;
+    background-color: rgb(145, 146, 150);
+}
+/* turistik yerler slider */
+.cntainer {
+    position: relative;
+    margin-top: 350px;
+    top:100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 600px;
+    background: #fff;
+    box-shadow: 0 30px 50px #dbdbdb;
+}
+
+/* .cntainer  */
+.slidr .item {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px rgb(126, 123, 123);
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.slidr .item:nth-child(1),
+.slidr .item:nth-child(2) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slidr .item:nth-child(3) {
+    left: 50%;
+}
+
+.slidr .item:nth-child(4) {
+    left: calc(50% + 220px);
+}
+
+.slidr .item:nth-child(5) {
+    left: calc(50% + 440px);
+}
+
+.slidr .item:nth-child(n + 6) {
+    left: calc(50% + 660px);
+    opacity: 0;
+}
+.item .contentt{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0,-50%);
+    font-family: system-ui;
+    display: none;
+}
+
+.slidr .item:nth-child(2) .contentt{
+    display: block;
+}
+.contentt .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+.contentt .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+.contentt button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+@keyframes animate{
+    form{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+.button{
+    width: 100px;
+    text-align: center;
+    position: fixed;
+    bottom: 20px;
+
+}
+
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin:0 5px;
+    border: 1px solid #000 ;
+    transition: 0.3s;
+}
+.button button:hover{
+    background: #ababab;
+    color: #fff;
+
+}
